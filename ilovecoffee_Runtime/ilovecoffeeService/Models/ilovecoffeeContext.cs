@@ -22,7 +22,10 @@ namespace ilovecoffeeService.Models
         {
         } 
 
+
         public DbSet<TodoItem> TodoItems { get; set; }
+        
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -31,7 +34,9 @@ namespace ilovecoffeeService.Models
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
 
+
         public System.Data.Entity.DbSet<ilovecoffeeService.DataObjects.CupOfCoffee> CupOfCoffees { get; set; }
-    }
+
+}
 
 }
